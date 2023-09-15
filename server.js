@@ -41,6 +41,12 @@ app.get('/claim/:recipientAddress', async (req, res) => {
             return res.status(400).json({ error: 'Invalid Ethereum address.' });
         }
 
+        // Check the balance of the recipient
+        const recipientBalance = await hre.ethers.provider.getBalance(recipientAddress);
+        if (recipientBalance.gte(hre.ethers.utils.parseEther("0.0001"))) {
+            return res.status(400).json({ error: 'Recipient already has sufficient balance.' });
+        }
+
         const result = await distributeToAddress(recipientAddress);
         res.json({
             message: `0.0001 ETH sent to: ${recipientAddress}`,
@@ -50,6 +56,9 @@ app.get('/claim/:recipientAddress', async (req, res) => {
 
     } catch (error) {
         console.error(error);
+        if (error.message && error.message.includes("revert Recipient has sufficient balance")) {
+            return res.status(400).json({ error: 'Recipient already has sufficient balance.' });
+        }
         res.status(500).json({ error: 'Error processing the transaction.' });
     }
 });
