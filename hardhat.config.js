@@ -12,7 +12,12 @@ module.exports = {
       chainId: 137,
       url: `https://rpc-mainnet.maticvigil.com/v1/${maticUrl}`,
       accounts: [privateKey]
-    }
+    },
+    goerli: {
+      chainId: 5,
+      url: `https://ethereum-goerli.publicnode.com	`,
+      accounts: [privateKey]
+    },
   },
   //* Keep name as 'etherscan' to avoid errors.
   etherscan: {
