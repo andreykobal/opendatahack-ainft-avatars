@@ -1,1 +1,1 @@
-web: node server.js
+web: npx hardhat compile && node server.js
