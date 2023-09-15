@@ -1,7 +1,8 @@
-//SPDX-License-Identifier: Unlicense
+// SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
@@ -213,36 +214,27 @@ contract NativeMetaTransaction is EIP712Base {
     }
 }
 
-contract GameItem is
-    ERC721URIStorage,
-    ContextMixin,
-    NativeMetaTransaction,
-    Ownable
-{
+contract GameItem is ERC721Enumerable, ContextMixin, NativeMetaTransaction, Ownable {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
+    uint256 public mintingFee = 0.0005 ether;
 
-    constructor(string memory name_, string memory symbol_)
-        ERC721(name_, symbol_)
-    {
+    mapping(uint256 => string) private _tokenURIs; 
+    mapping(address => uint256) private _balances;
+
+    constructor(string memory name_, string memory symbol_) ERC721(name_, symbol_) {
         _initializeEIP712(name_);
     }
 
     // for opensea collection
     function contractURI() public pure returns (string memory) {
-        return "https://ipfs.io/ipfs/Qmbph4yScYn5xbCk2dvfHThpEfH2L2JBhng5xEWgxNLiYp/collection-1/collection.json";
+        return "https://bafkreib4ff55r2vobbxysuu2oqipefsploizfcgamvmhxmxil4qlwyj2kq.ipfs.nftstorage.link/";
     }
 
-    /**
-     * This is used instead of msg.sender as transactions won't be sent by the original token owner, but by OpenSea.
-     */
     function _msgSender() internal view override returns (address sender) {
         return ContextMixin.msgSender();
     }
 
-    /**
-     * As another option for supporting trading without requiring meta transactions, override isApprovedForAll to whitelist OpenSea proxy accounts on Matic
-     */
     function isApprovedForAll(address _owner, address _operator)
         public
         view
@@ -256,15 +248,55 @@ contract GameItem is
         return ERC721.isApprovedForAll(_owner, _operator);
     }
 
-    function mintItem(address player, string memory tokenURI)
-        public
-        onlyOwner
-        returns (uint256)
-    {
+    function mintItem(string memory tokenURI) public returns (uint256) {
         _tokenIds.increment();
         uint256 newItemId = _tokenIds.current();
-        _mint(player, newItemId);
+        _mint(msg.sender, newItemId);
         _setTokenURI(newItemId, tokenURI);
+
+        _balances[msg.sender] += 1;
+
         return newItemId;
     }
+
+
+    function _setTokenURI(uint256 tokenId, string memory _tokenURI) internal virtual {
+        _tokenURIs[tokenId] = _tokenURI;
+    }
+
+    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
+        require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
+        return _tokenURIs[tokenId];
+    }
+
+    function getBalance(address wallet) public view returns (uint256) {
+        return _balances[wallet];
+    }
+
+function getTokensOfOwner(address owner) public view returns (string memory) {
+    uint256 tokenCount = balanceOf(owner);
+
+    if (tokenCount == 0) {
+        // Return an empty array in JSON format
+        return "[]";
+    } else {
+        string memory json = "[";
+
+        for (uint256 i = 0; i < tokenCount; i++) {
+            string memory tokenURI = tokenURI(tokenOfOwnerByIndex(owner, i));
+
+            // Add tokenURI to the JSON string
+            if (i > 0) {
+                json = string(abi.encodePacked(json, ","));
+            }
+            json = string(abi.encodePacked(json, '"', tokenURI, '"'));
+        }
+
+        // Close the JSON array and return
+        json = string(abi.encodePacked(json, "]"));
+        return json;
+    }
+}
+
+
 }
