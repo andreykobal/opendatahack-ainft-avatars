@@ -1,20 +1,22 @@
 const hre = require("hardhat");
-const NUM_ITEMS = 5;
-const OWNER_ADDRESS = "";
+const NUM_ITEMS = 1;
 
 async function main() {
+  const [signer] = await hre.ethers.getSigners();
+  const signerBalance = await hre.ethers.provider.getBalance(signer.address);
 
-      const GameItem = await hre.ethers.getContractFactory("GameItem");
-      const gameItem = await GameItem.attach('yourcontractaddress')
+  const GameItem = await hre.ethers.getContractFactory("AINFT");
 
-      for (var i = 1; i <= NUM_ITEMS; i++) {
-            await gameItem.mintItem(OWNER_ADDRESS, `your_metadata_uri`);
-      }
+  const gameItem = await GameItem.attach("0x643D5cf6fdd9Faa3825e194e925D07E290E993D2");
+
+  for (var i = 1; i <= NUM_ITEMS; i++) {
+    await gameItem.mintItem("https://bafkreigjdlompxctswi2gxcsb6eyutj7xint3wpqvtnyvv7f3ya7avj3hi.ipfs.nftstorage.link/");
+  }
 }
 
 main()
-      .then(() => process.exit(0))
-      .catch((error) => {
-            console.error(error);
-            process.exit(1);
-      });
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
