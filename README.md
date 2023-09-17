@@ -1,4 +1,4 @@
-# AINFT Mobile App GitHub Repository Documentation
+# AINFT Mobile App Documentation
 
 ## Introduction
 
