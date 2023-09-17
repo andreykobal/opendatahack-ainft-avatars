@@ -1,22 +1,27 @@
 # AINFT Mobile App Documentation
 
+![photo_2023-09-17 17 43 45](https://github.com/andreykobal/bitcoin-web3auth-ainft/assets/19206978/75c28444-bae8-45f9-813c-01551ce15d99)
+
+
 ## Introduction
 
 Welcome to the documentation for the AINFT Mobile App GitHub repository. This repository contains the code for an Android/iOS app that allows users to seamlessly interact with AINFT avatars and manage their semi-custodial crypto wallet. Users can log in using various social logins like Google and Facebook, receive a small amount of tokens to cover gas fees, mint avatars, and interact with them. Additionally, users can copy their wallet address and export the passphrase to import the wallet into MetaMask for trading avatars on OpenSea or other marketplaces.
 
 ## Table of Contents
 
-1. [Smart Contract](#smart-contract)
+1. [AINFT Smart Contract](#smart-contract)
 2. [Distribute Tokens Smart Contract](#distribute-tokens-smart-contract)
 3. [MintNft Unity Script](#mintnft-unity-script)
 4. [OpenAIChat Unity Script](#openaichat-unity-script)
 5. [NFTStorage.js Script](#nftstoragejs-script)
 
-## Smart Contract
+## AINFT Smart Contract
+
+`contracts/AINFT.sol`
 
 ### Contract Details
 
-- **Name**: GameItem
+- **Name**: AINFT
 - **Inheritance**: ERC721Enumerable, ContextMixin, NativeMetaTransaction, Ownable
 - **Description**: This smart contract represents the AINFT avatars. Users can mint new avatars and check their balance.
 - **Functions**:
@@ -45,6 +50,8 @@ string memory tokens = getTokensOfOwner(ownerAddress);
 
 ## Distribute Tokens Smart Contract
 
+`contracts/Distributor.sol`
+
 ### Contract Details
 
 - **Name**: Distributor
@@ -71,6 +78,8 @@ withdraw();
 ```
 
 ## MintNft Unity Script
+
+`web3auth-unity/Assets/Scripts/Web3Auth/MintNft.cs`
 
 ### Overview
 
@@ -99,6 +108,8 @@ GetTokensOfOwner();
 
 ## OpenAIChat Unity Script
 
+`web3auth-unity/Assets/Scripts/AiNft/OpenAIChat.cs`
+
 ### Overview
 
 The `OpenAIChat` Unity script enables users to engage in a conversation with an AI character, Aurelia Everwood. It utilizes the OpenAI GPT-3.5 model to generate responses and offers speech synthesis capabilities for a more immersive experience.
@@ -125,6 +136,8 @@ initialGreeting();
 ```
 
 ## NFTStorage.js Script
+
+`nft-storage/upload-script.js`
 
 ### Overview
 
