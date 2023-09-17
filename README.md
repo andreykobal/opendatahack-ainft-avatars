@@ -9,11 +9,27 @@ Welcome to the documentation for the AINFT Mobile App GitHub repository. This re
 
 ## Table of Contents
 
-1. [AINFT Smart Contract](#smart-contract)
-2. [Distribute Tokens Smart Contract](#distribute-tokens-smart-contract)
-3. [MintNft Unity Script](#mintnft-unity-script)
-4. [OpenAIChat Unity Script](#openaichat-unity-script)
-5. [NFTStorage.js Script](#nftstoragejs-script)
+1. [What is an AINFT Avatar?](#what-is-an-ainft-avatar)
+2. [AINFT Smart Contract](#ainft-smart-contract)
+3. [Distribute Tokens Smart Contract](#distribute-tokens-smart-contract)
+4. [MintNft Unity Script](#mintnft-unity-script)
+5. [OpenAIChat Unity Script](#openaichat-unity-script)
+6. [NFTStorage.js Script](#nftstoragejs-script)
+
+## What is an AINFT Avatar?
+
+An AINFT avatar is a digital representation of a person or historical figure created using advanced artificial intelligence and technology. These avatars are more than just images; they encapsulate the essence of individuals, including their appearance, voice, mannerisms, and stories. Here's what you need to know:
+
+- **Digital Time Capsules:** AINFT avatars serve as digital time capsules, preserving memories and identities for future generations.
+- **Personal Legacy:** They enable descendants to interact with avatars of their ancestors, gaining insights into family histories and forging a sense of continuity.
+- **Historical Figures:** AINFT avatars can bring historical figures to life, offering personalized interactions and immersive learning experiences.
+- **Companionship:** In an increasingly isolated world, these avatars provide companionship and connection, offering solace and conversation.
+- **Continuous Learning:** They redefine learning by enabling conversations with experts, like Einstein, and facilitating continuous growth.
+- **Entertainment:** Artists and celebrities can create avatars for unique fan interactions, revolutionizing entertainment.
+- **Cultural Heritage:** AINFT avatars preserve cultural traditions and ensure their accessibility and appreciation on a global scale.
+- **Generational Understanding:** They bridge generational gaps by encouraging empathy, dialogue, and shared connections.
+
+To dive deeper into the fascinating world of AINFT avatars, [read the full article](https://medium.com/@ailand/ainft-avatars-bridging-legacy-and-connection-in-the-digital-age-b3a3769e909c).
 
 ## AINFT Smart Contract
 
