@@ -18,6 +18,9 @@ Welcome to the  AINFT Mobile App GitHub repository. This repository contains the
 
 ## What is an AINFT Avatar?
 
+![avatars](https://github.com/andreykobal/bitcoin-web3auth-ainft/assets/19206978/bc8c3035-679f-4367-b8d5-7ae047d3373a)
+
+
 An AINFT avatar is a digital representation of a person or historical figure created using advanced artificial intelligence and technology. These avatars are more than just images; they encapsulate the essence of individuals, including their appearance, voice, mannerisms, and stories. Here's what you need to know:
 
 - **Digital Time Capsules:** AINFT avatars serve as digital time capsules, preserving memories and identities for future generations.
