@@ -1,11 +1,11 @@
-# AINFT Mobile App Documentation
+# AINFT Mobile App 
 
 ![photo_2023-09-17 17 43 45](https://github.com/andreykobal/bitcoin-web3auth-ainft/assets/19206978/75c28444-bae8-45f9-813c-01551ce15d99)
 
 
 ## Introduction
 
-Welcome to the documentation for the AINFT Mobile App GitHub repository. This repository contains the code for an Android/iOS app that allows users to seamlessly interact with AINFT avatars and manage their semi-custodial crypto wallet. Users can log in using various social logins like Google and Facebook, receive a small amount of tokens to cover gas fees, mint avatars, and interact with them. Additionally, users can copy their wallet address and export the passphrase to import the wallet into MetaMask for trading avatars on OpenSea or other marketplaces.
+Welcome to the  AINFT Mobile App GitHub repository. This repository contains the code for an Android/iOS app that allows users to seamlessly interact with AINFT avatars and manage their semi-custodial crypto wallet. Users can log in using various social logins like Google and Facebook, receive a small amount of tokens to cover gas fees, mint avatars, and interact with them. Additionally, users can copy their wallet address and export the passphrase to import the wallet into MetaMask for trading avatars on OpenSea or other marketplaces.
 
 ## Table of Contents
 
