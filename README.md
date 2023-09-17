@@ -1,4 +1,4 @@
-# AINFT Avatars Mobile App 
+# AINFT Avatars Mobile App (iOS/Android)
 
 ![photo_2023-09-17 17 43 45](https://github.com/andreykobal/bitcoin-web3auth-ainft/assets/19206978/75c28444-bae8-45f9-813c-01551ce15d99)
 
