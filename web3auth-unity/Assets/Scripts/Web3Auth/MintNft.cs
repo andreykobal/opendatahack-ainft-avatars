@@ -10,8 +10,8 @@ using Newtonsoft.Json;
 
 public class MintNft : MonoBehaviour
 {
-    private string url = "https://rpc.ankr.com/eth_goerli";
-    private string contractAddress = "0xe36CcD1B3cfF07177A167BD234205d2E73A98180";
+    private string url = "https://public-node.testnet.rsk.co";
+    private string contractAddress = "0x6fFE8420D0faCE10E86dbb8657F11e7CD0957e43";
     private string contractABI;
     private string privateKey;
     private string userInfo;

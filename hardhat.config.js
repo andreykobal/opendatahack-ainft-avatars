@@ -18,6 +18,12 @@ module.exports = {
       url: `https://ethereum-goerli.publicnode.com	`,
       accounts: [privateKey]
     },
+    rootstock: {
+      chainId: 31,
+      url: `https://public-node.testnet.rsk.co`,
+      accounts: [privateKey]
+    },
+    }
   },
   //* Keep name as 'etherscan' to avoid errors.
   etherscan: {
