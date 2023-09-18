@@ -5,11 +5,27 @@
 
 ## Introduction
 
-Welcome to the  AINFT Mobile App GitHub repository. This repository contains the code for an Android/iOS app that allows users to seamlessly interact with AINFT avatars and manage their semi-custodial crypto wallet. Users can log in using various social logins like Google and Facebook, receive a small amount of tokens to cover gas fees, mint avatars, and interact with them. Additionally, users can copy their wallet address and export the passphrase to import the wallet into MetaMask for trading avatars on OpenSea or other marketplaces.
+**Welcome to the AINFT Mobile App GitHub Repository!**
 
-The repository also contains a react frontend, that allows users to mint custom AINFT avatars directly from the frontend. This process leverages cutting-edge technologies like IPFS, Filecoin, and NFT.Storage to ensure the seamless creation and storage of unique avatars. 
+This repository is your gateway to a powerful Android/iOS app designed for a seamless experience with AINFT avatars and a semi-custodial crypto wallet. Here's a concise overview:
 
-Users can use their avatars in the [AILAND shooter game](https://ailand.app/). Interact with them by text or voice. Use them as game skins. 
+📱 **Mobile App Features**:
+- **User-Friendly Interaction:** Effortlessly engage with AINFT avatars through your mobile device.
+- **Multi-Platform Support:** Available on both Android and iOS platforms for widespread accessibility.
+- **Social Login Integration:** Access your account swiftly via Google and Facebook login options.
+- **Gas Fee Coverage:** Enjoy a hassle-free experience with a token allocation to cover gas fees.
+- **Avatar Minting:** Easily mint your avatars and personalize them to your liking.
+- **Interactive Avatars:** Engage in meaningful interactions with your avatars, whether it's text-based or through voice communication.
+- **Wallet Management:** Copy your wallet address and export the passphrase to import it into MetaMask or other platforms for avatar trading on OpenSea and more.
+
+🖼️ **Frontend for Avatar Minting**:
+- Seamlessly mint custom AINFT avatars directly from the frontend.
+- Utilizes groundbreaking technologies such as IPFS, Filecoin, and NFT.Storage for secure and efficient avatar creation and storage.
+
+🎮 **AILAND Shooter Game Integration**:
+- Elevate your gaming experience by using your AINFT avatars as skins within the [AILAND shooter game](https://ailand.app/).
+- Engage in in-game communication with your avatars through text or voice, enhancing immersion.
+
 
 ![261868983-a0964d82-49e8-4f9c-b690-1f8f0775af49 (1)](https://github.com/andreykobal/opendatahack-ainft-avatars/assets/19206978/728d40c1-1004-465a-8e60-1ea3875745f6)
 
