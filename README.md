@@ -7,7 +7,14 @@
 
 Welcome to the  AINFT Mobile App GitHub repository. This repository contains the code for an Android/iOS app that allows users to seamlessly interact with AINFT avatars and manage their semi-custodial crypto wallet. Users can log in using various social logins like Google and Facebook, receive a small amount of tokens to cover gas fees, mint avatars, and interact with them. Additionally, users can copy their wallet address and export the passphrase to import the wallet into MetaMask for trading avatars on OpenSea or other marketplaces.
 
-The repository also contains a react frontend, that allows users to mint custom AINFT avatars directly from the frontend. This process leverages cutting-edge technologies like IPFS, Filecoin, and NFT.Storage to ensure the seamless creation and storage of unique avatars.
+The repository also contains a react frontend, that allows users to mint custom AINFT avatars directly from the frontend. This process leverages cutting-edge technologies like IPFS, Filecoin, and NFT.Storage to ensure the seamless creation and storage of unique avatars. 
+
+Users can use their avatars in the [AILAND shooter game](https://ailand.app/). Interact with them by text or voice. Use them as game skins. 
+
+![261868983-a0964d82-49e8-4f9c-b690-1f8f0775af49 (1)](https://github.com/andreykobal/opendatahack-ainft-avatars/assets/19206978/728d40c1-1004-465a-8e60-1ea3875745f6)
+
+![261869781-f8fef8ff-e3f1-4120-9f61-272f33a5b120 (2)](https://github.com/andreykobal/opendatahack-ainft-avatars/assets/19206978/93fe3428-f967-409a-b40a-b625f05b5da8)
+
 
 
 ## Table of Contents
@@ -187,8 +194,6 @@ uploadNFTFiles();
 #### Demo: [Mint Your Custom AINFT Avatar](https://simple-nft-minter-xt5p.vercel.app/)
 
 To mint a custom AINFT avatar, users provide various attributes, including name, description, image, animation, and custom traits. Here's a brief overview of how the frontend handles the minting process with a focus on IPFS and NFT.Storage integration.
-
-![261868983-a0964d82-49e8-4f9c-b690-1f8f0775af49 (1)](https://github.com/andreykobal/opendatahack-ainft-avatars/assets/19206978/728d40c1-1004-465a-8e60-1ea3875745f6)
 
 
 #### 1. Uploading Files to IPFS
