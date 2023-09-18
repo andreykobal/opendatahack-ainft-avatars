@@ -19,7 +19,7 @@ This repository is your gateway to a powerful Android/iOS app designed for a sea
 - **Wallet Management:** Copy your wallet address and export the passphrase to import it into MetaMask or other platforms for avatar trading on OpenSea and more.
 
 🖼️ **Frontend for Avatar Minting**:
-- Seamlessly mint custom AINFT avatars directly from the frontend.
+- Seamlessly mint custom AINFT avatars directly from the frontend: [Mint Your AINFT Avatar](https://simple-nft-minter-xt5p.vercel.app/).
 - Utilizes groundbreaking technologies such as IPFS, Filecoin, and NFT.Storage for secure and efficient avatar creation and storage.
 
 🎮 **AILAND Shooter Game Integration**:
