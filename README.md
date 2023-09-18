@@ -7,6 +7,9 @@
 
 Welcome to the  AINFT Mobile App GitHub repository. This repository contains the code for an Android/iOS app that allows users to seamlessly interact with AINFT avatars and manage their semi-custodial crypto wallet. Users can log in using various social logins like Google and Facebook, receive a small amount of tokens to cover gas fees, mint avatars, and interact with them. Additionally, users can copy their wallet address and export the passphrase to import the wallet into MetaMask for trading avatars on OpenSea or other marketplaces.
 
+Users can also mint custom AINFT avatars directly from a web frontend. This process leverages cutting-edge technologies like IPFS, Filecoin, and NFT.Storage to ensure the seamless creation and storage of unique avatars.
+
+
 ## Table of Contents
 
 1. [What is an AINFT Avatar?](#what-is-an-ainft-avatar)
