@@ -15,6 +15,7 @@ Welcome to the  AINFT Mobile App GitHub repository. This repository contains the
 4. [MintNft Unity Script](#mintnft-unity-script)
 5. [OpenAIChat Unity Script](#openaichat-unity-script)
 6. [NFTStorage.js Script](#nftstoragejs-script)
+7. [Minting Custom AINFT Avatars Frontend with IPFS, Filecoin and NFT.Storage](#minting-custom-ainft-avatars-frontend-with-ipfs-filecoin-and-nft.storage)
 
 ![avatars](https://github.com/andreykobal/bitcoin-web3auth-ainft/assets/19206978/bc8c3035-679f-4367-b8d5-7ae047d3373a)
 
@@ -176,11 +177,11 @@ uploadNFTFiles();
 ```
 
 
-### Minting Custom AINFT Avatars  Frontend with IPFS, Filecoin and NFT.Storage
+## Minting Custom AINFT Avatars Frontend with IPFS, Filecoin and NFT.Storage
 
 `react-frontend/src/MintNFT.js`
 
-#### Demo: (Mint Your Custom AINFT Avatar)[https://simple-nft-minter-xt5p.vercel.app/]
+#### Demo: [Mint Your Custom AINFT Avatar](https://simple-nft-minter-xt5p.vercel.app/)
 
 To mint a custom AINFT avatar, users provide various attributes, including name, description, image, animation, and custom traits. Here's a brief overview of how the frontend handles the minting process with a focus on IPFS and NFT.Storage integration.
 
