@@ -175,6 +175,75 @@ The `NFTStorage.js` script is used to upload NFT files and generate metadata for
 uploadNFTFiles();
 ```
 
+
+### Minting Custom AINFT Avatars  Frontend with IPFS, Filecoin and NFT.Storage
+
+`react-frontend/src/MintNFT.js`
+
+#### Demo: (Mint Your Custom AINFT Avatar)[https://simple-nft-minter-xt5p.vercel.app/]
+
+To mint a custom AINFT avatar, users provide various attributes, including name, description, image, animation, and custom traits. Here's a brief overview of how the frontend handles the minting process with a focus on IPFS and NFT.Storage integration.
+
+![261868983-a0964d82-49e8-4f9c-b690-1f8f0775af49 (1)](https://github.com/andreykobal/opendatahack-ainft-avatars/assets/19206978/728d40c1-1004-465a-8e60-1ea3875745f6)
+
+
+#### 1. Uploading Files to IPFS
+
+The frontend allows users to upload avatar images and animations. These files are then sent to IPFS for decentralized storage. The following code snippet demonstrates the process:
+
+```javascript
+const uploadFileToIPFS = async (fileOrUrl) => {
+    let blob;
+    if (typeof fileOrUrl === 'string') {
+        const response = await fetch(fileOrUrl);
+        blob = await response.blob();
+    } else {
+        blob = new Blob([fileOrUrl]);
+    }
+    const cid = await client.storeBlob(blob);
+    return `https://ipfs.io/ipfs/${cid}`;
+};
+```
+
+The `uploadFileToIPFS` function checks whether the input is a file or a URL. If it's a URL, the function fetches the file, and if it's already a file, it's converted into a Blob. The Blob is then stored on IPFS, and the resulting CID (Content Identifier) is returned.
+
+#### 2. Constructing Metadata
+
+Metadata plays a crucial role in defining the characteristics of each AINFT avatar. The frontend constructs metadata that includes information such as name, description, image URL, animation URL, and attributes. The code for constructing metadata is as follows:
+
+```javascript
+const metadata = {
+    description,
+    external_url: "https://ailand.app/",
+    image: imageURL,
+    name,
+    animation_url: animationURL,
+    attributes: [
+        ...Object.entries(defaultAttributes).map(([trait_type, value]) => ({
+            trait_type,
+            value
+        })),
+        ...customAttributes
+    ]
+};
+```
+
+In this code, `imageURL` and `animationURL` are URLs of the uploaded avatar image and animation, respectively. The `attributes` field includes both default attributes and any custom attributes provided by the user.
+
+#### 3. Storing Metadata on IPFS using NFT.Storage
+
+Once the metadata is constructed, it is stored on IPFS using NFT.Storage, a specialized service for NFT-related data. Here's how it's done:
+
+```javascript
+const metadataBlob = new Blob([JSON.stringify(metadata)]);
+const metadataCID = await client.storeBlob(metadataBlob);
+const tokenURI = `https://ipfs.io/ipfs/${metadataCID}`;
+```
+
+The metadata is first converted into a Blob and then stored on IPFS using the NFT.Storage client. The resulting CID is used to create the token URI, which uniquely identifies the avatar's metadata on IPFS.
+
+With these steps, users can seamlessly mint custom AINFT avatars, leveraging the power of IPFS, NFT.Storage, and other decentralized technologies directly from the AINFT Avatars Mobile App frontend.
+
 ## Conclusion
 
 This documentation provides an overview of the key components in the AINFT Mobile App GitHub repository. Developers can use this information to understand and work with the codebase for building and improving the AINFT mobile application.
